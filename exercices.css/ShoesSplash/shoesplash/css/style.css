@@ -1,0 +1,164 @@
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #F6D4F5;
+}
+
+body    {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:lightgrey ;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: lightseagreen;
+}
+
+header img{
+    padding-top: 1%;
+    padding-bottom: 0.5%;
+}
+
+.topbar {
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 0.5% 0% 0.5% 0%;
+}
+
+#cart {
+    float: right;
+    display: flex;
+    align-items: center;
+    margin-right: 3%;
+    padding-top: 2%;
+    background-color: #F6D4F5;
+
+}
+
+#cart i{
+    float: right;
+    font-size: 3.0vw;
+    color: #E5ADEE;
+}
+
+#cart p{
+    padding-top: 2%;
+    float: left;
+    text-align: right;
+    font-size: 1.4vw;
+    margin-right: 8%;
+}
+
+#cart span {
+    font-weight: bold;
+}
+
+.container {
+    width: 75%;
+    max-width: 1500px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F6D4F5;
+    margin-top: 2%;
+    padding: 0% 2.5% 5% 2.5%; 
+    font-size: 1.8vw;
+}
+
+nav a{
+    font-family: 'Courgette';
+    text-decoration: none;
+    color: black;
+    padding: 2%;
+}
+
+nav a:hover {
+    background-color: rgb(53, 50, 50);
+    color: white;   
+    transition: all 0.1s ease 0s;
+    width: max-content;
+}
+main { 
+    background-color: white;
+    
+}
+
+#slider { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0,0, 0, 0.1);
+    margin: 2% 2% 2% 2%;
+}
+
+#slider h2{
+    position: absolute;
+    left: 15%;
+    top: 33%;
+    background-color: #F6D4F5;
+    opacity: 0.8;
+    padding: 1%;
+    text-align: left;
+}
+
+#slider img {
+    width: 94%;
+    max-width:1500px ;
+    height: auto;
+
+}
+
+#select { 
+    clear: both;
+    border: 5px dashed red;
+    background-color: violet; 
+    box-shadow: 0 0 5px rgba(0,0, 0, 0.1);
+}
+
+#select article{
+    background-color: beige;
+}
+
+#news {
+    border: 5px dashed red;
+}
+
+#news article {
+    background-color: goldenrod;
+}
+
+#new {
+    box-shadow: 0 0 5px rgba(0,0, 0, 0.1);
+}
+#best {
+    box-shadow: 0 0 5px rgba(0,0, 0, 0.1);
+}
+
+#crush {
+    box-shadow: 0 0 5px rgba(0,0, 0, 0.1);
+}
+
+#info {
+    border: 5px dashed blue;
+}
+
+#bottombar {
+    border: 5px dashed blue;
+}
+
+#bottombar article{
+    background-color: cornsilk;
+}

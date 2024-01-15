@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        .divimg {
+            width :320px;
+            height: 190px;
+            /* height: 560px;
+            width: 660px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between; */
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Galerie</h1>
+<div>
+
+    <div class ="divimg" id="divimg1">
+        <img id="im1">
+    </div>
+    
+    <div class ="divimg" id="divimg2">
+        <img id="im2">
+    </div>
+    
+    <div class ="divimg" id="divimg3">
+        <img id="im3">
+    </div>
+    
+    <div class ="divimg" id="divimg4">
+        <img id="im4">
+    </div>
+    
+    <div class ="divimg" id="divimg5">
+        <img id="im5">
+    </div>
+    
+    <div class ="divimg" id="divimg6">
+        <img id="im6">
+    </div>
+    
+</div>
+    <script>
+         $(document).ready(function() {
+            
+            $("#im1").attr("src","https://www.referenseo.com/wp-content/uploads/2019/03/image-attractive-960x540.jpg")
+            $("#im2").attr("src","https://www.referenseo.com/wp-content/uploads/2019/03/image-attractive-960x540.jpg")
+            $("#im3").attr("src","https://www.referenseo.com/wp-content/uploads/2019/03/image-attractive-960x540.jpg")
+            $("#im4").attr("src","https://www.referenseo.com/wp-content/uploads/2019/03/image-attractive-960x540.jpg")
+            $("#im5").attr("src","https://www.referenseo.com/wp-content/uploads/2019/03/image-attractive-960x540.jpg")
+            $("#im6").attr("src","https://www.referenseo.com/wp-content/uploads/2019/03/image-attractive-960x540.jpg")
+        
+            $("#im1").click(function(){
+            $("#divimg1").animate({width:"100px",height:"50px"},2000)
+            $("#divimg1").css("width:min-content")
+            $("#im1").css("height:auto")
+            
+            
+           })
+
+           $("#im2").click(function(){
+            $("#im2").animate({left:"300px",top:"200px", width:"150px",height:"150px"},2000)
+           })
+
+           $("#im3").click(function(){
+            $("#im3").animate({left:"300px",top:"200px", width:"150px",height:"150px"},2000)
+           })
+
+           $("#im4").click(function(){
+            $("#im4").animate({left:"300px",top:"200px", width:"150px",height:"150px"},2000)
+           })
+
+           $("#im5").click(function(){
+            $("#im5").animate({left:"300px",top:"200px", width:"150px",height:"150px"},2000)
+           })
+
+           $("#im6").click(function(){
+            $("#im6").animate({left:"300px",top:"200px", width:"150px",height:"150px"},2000)
+           })
+        });
+
+    </script>
+
+</body>
+</html>

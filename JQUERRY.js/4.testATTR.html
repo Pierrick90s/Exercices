@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        .mondiv {
+            width:400px; height:200px; border:1px solid black;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div>
+
+        <button>Affiche</button>
+    </div>
+    <div>
+
+        <img id="im1">
+        <!-- <a>google.fr</a> -->
+
+    </div>
+    
+    
+
+    <script>
+        $(document).ready(function() {
+            
+            $("button").click(function() {
+            $("#im1").attr("src","https://www.referenseo.com/wp-content/uploads/2019/03/image-attractive-960x540.jpg")
+            // $("a").attr("href","https://www.referenseo.com/wp-content/uploads/2019/03/image-attractive-960x540.jpg")
+            //     $()
+        });
+
+
+
+
+        });
+
+    </script>
+</body>
+</html>

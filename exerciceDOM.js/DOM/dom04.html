@@ -1,0 +1,25 @@
+<!-- exemple de fonction qui créer un bloc et 3 argument et l'attache à un autre bloc -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        function creebloc(nomblock,attache,txt) {
+            let bloc = document.createElement(nomblock) 
+            bloc.appendChild(document.createTextNode(txt))
+            attache.append(bloc)
+        }
+
+        let container = document.getElementById('container')
+        console.log(container)
+        creebloc('p',container,"textos")
+
+        </script>
+</body>
+</html>

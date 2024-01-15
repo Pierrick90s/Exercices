@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        table, thead, tbody, td, tr{
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        
+    <!-- <table>
+        <thead id="nopr">
+
+        </thead>
+        <tbody id="adre0">
+
+        </tbody>
+        <tbody id ="adre1">
+
+        </tbody>
+        <tbody id="adre2">
+
+        </tbody>
+    </div> -->
+
+    <script>
+
+let clients = [{
+            nom: "Dupont",
+            prenom: "Valentin",
+            adresse: {
+                rue: "17 rue Villeneuve",
+                cp: "69000",
+                ville: "Lyon"
+                }
+            },
+            {
+                nom: "Deedee",
+                prenom: "Ramones",
+                adresse: {
+                    rue: "Madison",
+                    cp: "69000",
+                    ville: "New-York"
+                }
+            },
+            {
+                nom: "Lemy",
+                prenom: "Motorhead",
+                adresse: {
+                    rue: "Portobello",
+                    cp: "69000",
+                    ville: "London"
+                }
+            }]
+
+            clients.forEach(   function(x) {
+                // console.log(x.nom)
+                // console.log(x.prenom)
+                // console.log(x.adresse)
+
+                let np = document.createElement('h1');
+                np.innerHTML = x.nom +" " + x.prenom;
+                document.getElementById("container").appendChild(np);
+
+                let adr0 = document.createElement('p');
+                adr0.innerHTML = x.adresse.rue;
+                document.getElementById("container").appendChild(adr0);
+
+                let adr1 = document.createElement('p');
+                adr1.innerHTML = x.adresse.cp;
+                document.getElementById("container").appendChild(adr1);
+
+                let adr2 = document.createElement('p');
+                adr2.innerHTML = x.adresse.ville;
+                document.getElementById("container").appendChild(adr2);
+            
+            })
+
+        // document.createElement(clients[clients])
+        // console.log(document)
+
+
+        
+    </script>
+</body>
+</html>

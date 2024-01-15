@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let num = 5 ;
+
+if (num < 10) { 
+    console.log("Small") ; 
+} 
+else if (num < 100) {
+    console.log("Medium"); } 
+else {
+    console.log("Large"); 
+}
+var chevy01 = {
+        make: 'Chevy',
+        model: 'Bel Air',
+        year: 1957,
+        color: 'red',
+        passengers: 2,
+        convertible: false, 
+        mileage: 1021,
+        started: false ,
+        fuel: 0,
+
+        start: function() {
+            if (this.fuel > 0) {
+            console.log("démarre")
+            this.started = true
+            }
+        },
+
+        stop: function() {
+            console.log("stop")
+            this.started = false
+        },
+
+        drive: function() {
+                if(this.started) {
+                    console.log("go ahead chevy01 !!!")
+                }
+        },
+}
+
+class car {
+
+    constructor(ma,m,y,c,con,mil) {
+        
+        this.make = ma;
+        this.model = m;
+        this.year = y;
+        this.color = c;
+        this.convertible = con;
+        this.mileage = mil;
+    }
+        info(){
+            console.log("Constructeur : " + this.make + " | Model :  " + this.model + " | Année :  " + this.year + " | Couleur :  " + this.color + " | Convertible :  " + this.convertible + " | Mileage : " + this.mileage)
+        }
+
+    }
+
+let CAMA = new car("Chevrolet","Camaro","1967","Yellow",false,19450);
+CAMA.info()
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

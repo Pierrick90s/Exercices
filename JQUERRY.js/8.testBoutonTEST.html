@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+
+#test2 { width:100px ; height:100px; background-color: aquamarine; 
+          position:absolute; }
+        .rouge { color:red; }
+        .gros  { font-size: 2em; }
+
+    </style>
+</head>
+<body>
+
+    <h1>JQuery - &copy; openlab</h1>
+  
+    <button id="btn1" >ajoute texte</button>
+    <button id="btn2" >ajoute texte+html</button>
+    <button id="btn3" >ajoute html</button>
+    <button id="btn4" >cache</button>
+    <button id="btn5" >montre</button>
+    <button id="btn6" >rouge</button>
+    <button id="btn7" >gros</button>
+    <button id="btn9" >anime</button>
+   
+    <div id="test2">ici</div>
+
+    <script>
+        $(document).ready(function(){
+           
+           $("#btn1").click(function (){
+                $("#test2").text("du texte")
+           })
+
+           $("#btn2").click(function(){
+            $("#test2").text("<strong>du texte<strong>")
+           })
+
+           $("#btn3").click(function(){
+            $("#test2").html("<strong>du texte<strong>")
+           })
+
+           $("#btn4").click(function(){
+            $("#test2").hide()
+           })
+
+           $("#btn5").click(function(){
+            $("#test2").show()
+           })
+
+           $("#btn6").click(function(){
+            $("#test2").toggleClass('rouge')
+           })
+
+           $("#btn7").click(function(){
+            $("#test2").toggleClass('gros')
+           })
+
+           $("#btn9").click(function(){
+            $("#test2").animate({left:"300px",top:"200px", width:"150px",height:"150px"},2000)
+           })
+        });
+
+
+    </script>
+</body>
+</html>

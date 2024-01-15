@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+
+ #mondiv {
+     width:400px; height:200px; border:1px solid;
+    }
+
+#p1 {
+     width:400px; height:200px; border:1px solid;
+    }
+    </style>
+</head>
+<body>
+
+    <div id="mondiv">
+        MONDIV
+    </div>
+    <p id="p1">un paragraphe</p>
+
+    <script>
+        $(document).ready(function(){
+           
+            $("#mondiv").on( {
+                mouseover: function(event){
+                    $(this).css("background-color", "white")
+                    $(this).css("font-size","128px")
+                    $(this).css("font-style","italic")
+                    $(this).css("font-style","strong")
+                    $(this).css("width","fit-content")
+                    
+                },
+                mouseout: function(event) {
+                    $(this).css("background-color","blue")
+                    $(this).css("font-size","12px")
+                    $(this).css("border","solid 1px black")
+                    $(this).css("width","400px")
+                },
+                click: function(event) {
+                    $(this).css("background-color","red")
+                    $(this).css("border","solid 5px black")
+                }
+            })
+
+            $("#p1").on("mouseout mouseover",function(){
+                console.log("la souris entre ou sort de p#p1")
+
+            })
+
+
+
+
+
+
+
+        });
+
+
+    </script>
+</body>
+</html>

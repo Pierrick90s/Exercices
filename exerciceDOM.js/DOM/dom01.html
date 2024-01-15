@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Document</h1>
+        <p id ="debut"></p>
+    <p id ="p1" class="cours"> du texte pour début</p>
+    <p id ="p2" class="cours"> du texte pour début</p>
+    <p id ="p3" class="cours"> du texte pour début</p>
+    <p id ="p4" class="cours"> du texte pour début</p>
+    <form action="..." method ="post">
+        <input type="text" name="unnom"/>
+    </form>
+
+
+        <script>
+
+                document.getElementById("debut").innerHTML = "<strong>change le texte</strong>"
+                document.getElementsByClassName("cours")[1].innerHTML = "modif 2eme element"
+                document.getElementsByTagName('h1')[0].innerHTML ="TOTO"
+                console.log(document.getElementsByName("unnom")[0])
+                console.log(document.querySelectorAll(".cours")[0])
+
+        </script>
+</body>
+</html>

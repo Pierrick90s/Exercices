@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+    
+    .hide {
+        display:none;
+    }
+
+  </style>
+</head>
+<body>
+
+    <div id="selection">
+      <!-- <fieldset >
+        <legend>SÃ©lectionner le genre</legend>
+        <div><input type="radio" id="man" name="choix"/>
+              <label for="man">Hommes</label>
+        </div>
+        <div><input type="radio" id="woman" name="choix"/>
+              <label for="woman">Femmes</label>
+        </div>
+        <div><input type="radio" id="kids" name="choix"/>
+              <label for="kids">Enfants</label>
+        </div>
+      </fieldset>     -->
+    
+    <button id="man">Hommes</button>
+    <button id="woman">Femmes</button>
+    <button id="kids">Enfants</button>
+    </div>
+
+    <div id="container">
+    </div>
+
+    <script>
+
+let container = document.getElementById('container')
+
+function affiche(P) {
+
+  for (let i = 0; i < P.length; i++) {
+    let categ = document.createElement('h1')
+    categ.innerHTML = Object.keys(P[i]).toString()
+    let section = document.createElement('div')
+    section.setAttribute("id", Object.keys(P[i]).toString())
+    section.setAttribute("class", "categ")
+    container.append(section)
+    section.append(categ)
+    let vets = Object.values(P[i])[0]
+    for (let j = 0; j < vets.length; j++) {
+      let p = document.createElement('p')
+      p.innerHTML = vets[j].nom_produit
+      section.append(p)
+      let p2 = document.createElement('p')
+      p2.innerHTML = vets[j].prix
+      section.append(p2)
+      let im = document.createElement('img')
+      im.setAttribute("src", vets[j].photo)
+      section.append(im)
+    }
+    section.classList.add('hide')
+  }
+}
+
+
+function efface(){
+  let lessections = document.getElementsByClassName('categ')
+  for (let x = 0; x < lessections.length; x++) { lessections[x].classList.add('hide') }
+
+}
+
+document.getElementById('man').addEventListener('click', () => {
+  efface()
+  document.getElementById('hommes').classList.remove('hide')
+})
+
+document.getElementById('woman').addEventListener('click', () => {
+  efface()
+  document.getElementById('femmes').classList.remove('hide')
+})
+
+document.getElementById('kids').addEventListener('click', () => {
+  efface()
+  document.getElementById('enfants').classList.remove('hide')
+})
+
+
+let produits = [
+  {
+    hommes: [
+      { nom_produit: "short homme", prix: 26.00, photo: "https://media.auchan.fr/9d0c80b4-42c1-4b5a-ad9a-3261cdbbe43e_256x256/B2CD/" },
+      { nom_produit: "pantalon homme", prix: 28.00, photo: "https://media.auchan.fr/baaaf199-d8e7-4e3c-af5b-a54ea7e50e68_256x256/B2CD/" },
+      { nom_produit: "t-shirt homme", prix: 35.00, photo: "https://media.auchan.fr/c017a0f8-057e-4e31-ae1b-e703da5554af_256x256/B2CD/" },
+
+    ]
+  },
+  {
+    femmes: [
+      { nom_produit: "robe femme", prix: 25.00, photo: "https://www.terrebleue.com/files/cache/square_two/files/221-3120-31-101-c-60098357ea22f.jpeg" },
+      { nom_produit: "pantalon femme", prix: 28.00, photo: "https://media.auchan.fr/9a63b934-0ac2-46ce-8070-5c47a582302b_256x256/B2CD/" },
+      { nom_produit: "t-shirt femme", prix: 35.00, photo: "https://media.auchan.fr/1f038c7a-d25b-475d-b8c5-26ec7c89a84f_256x256/B2CD/" },
+      { nom_produit: "chaussure femme", prix: 15.00, photo: "https://www.terrebleue.com/files/cache/square_two/files/421-3305-00-856-b-614d9ffc186b1.jpg" }
+    ]
+  },
+  {
+    enfants: [
+      { nom_produit: "robe enfant", prix: 25.00, photo: "https://cdn.childrensalon.com/media/catalog/product/cache/0/small_image/256x256/9df78eab33525d08d6e5fb8d27136e95/m/o/moncler-enfant-girls-pink-polo-dress-446996-d40ca536603f528a9ff5c09cb9618b1b96bfd8fd.jpg" },
+      { nom_produit: "pantalon enfant", prix: 28.00, photo: "https://cdn.childrensalon.com/media/catalog/product/cache/0/small_image/256x256/9df78eab33525d08d6e5fb8d27136e95/m/o/moncler-enfant-black-cotton-jersey-joggers-350527-62004e1e127f4dd1dd6ec5685179f95e4032e041.jpg" },
+      { nom_produit:"t-shirt enfant"  , prix:35.00, photo: "https://ithk-pro-itmall-item.oss-cn-hongkong.aliyuncs.com/2/product/0ZXTEMX10002LBGX/0ZXTEMX10002LBGX-pdp-1.jpg?x-oss-process=image/resize,m_pad,h_750,w_600/auto-orient,1/quality,Q_80" },
+  ]}
+]
+
+affiche(produits)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function Person(n, a) {
+            this.nom = n ,
+            this.age = a ,
+            this.presentation = () => {
+                console.log("I am " +  this.nom + " I am " + this.age + " yers old")
+            }
+        }
+
+        let Pierrick = new Person("Pierrick",24)
+        let Jean = new Person("Jean",8)
+        Pierrick.presentation()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

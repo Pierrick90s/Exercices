@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+
+#test2 { width:100px ; height:100px; background-color: aquamarine; 
+          position:absolute; }
+        .rouge { color:red; }
+        .gros  { font-size: 2em; }
+
+    </style>
+</head>
+<body>
+
+    <script>
+        function retour(donnees, callbak) {
+            console.log(donnees)
+            callbak()  // executera l'IIFES ->    (function() {console.log('zyva')})()
+        }
+
+        retour("coucou", function () { console.log('zyva') })   
+    </script>
+    
+</body>
+</html>

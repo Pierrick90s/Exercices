@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" name="saisie">
+<button>ajoute un pragraphe</button>
+
+<div id="container"></div>
+
+    <div id="container">
+
+    </div>
+
+    <script>
+        document
+        .getElementsByTagName("button")[0]
+        .addEventListener("click", function () {
+
+            let p1 = document.createElement("p");
+            // recupérer la valeur de input
+            let newText = document.createTextNode("mon texte");
+            p1.appendChild(newText);
+            let container = document.getElementById("container");
+            container.appendChild(p1)
+        });
+
+        
+
+    </script>
+</body>
+</html>
